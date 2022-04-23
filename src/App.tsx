@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import 'antd/dist/antd.css';
 import './App.css';
+import {API_URL} from './api/config'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Dashboard } from './pages/Dashboard';
+import { Reports } from './pages/Reports';
+import { ProfileDetails } from './pages/ProfileDetails';
 
 function App() {
+
+  // fetch api data and push them in the local storage
+  // you can change the api url in the "src/api/config" file
+  // the below function load once when the applicatin run
+  useEffect(() => {
+    localStorage.clear();
+    fetch(API_URL,{method:'GET'})
+    .then(res => res.json())
+    .then(
+      (result) => {
+          localStorage.setItem('UserProfile', JSON.stringify(result));
+      },
+      (error) => {
+          console.log(error)
+      }
+    )
+   }, []);
+  
   return (
+    //Router configuration
+    //to add new router in the application
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/reports' element={<Reports />} />
+          <Route path='/profile' element={<ProfileDetails />} />
+        </Routes>
+      </Router>    
     </div>
   );
 }
