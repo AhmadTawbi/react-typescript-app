@@ -18,7 +18,7 @@ function App() {
   // the below function load once when the applicatin run
   useEffect(() => {
     localStorage.clear();
-    fetch(API_URL,{method:'GET'})
+    fetch(process.env.REACT_APP_BASE_URL + "/users/1" ,{method:'GET'})
     .then(res => res.json())
     .then(
       (result) => {
