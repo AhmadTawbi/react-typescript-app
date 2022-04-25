@@ -15,7 +15,7 @@ function App() {
   // you can change the api url in the "src/api/config" file
   // the below function load once when the applicatin run
   useEffect(() => {
-    localStorage.clear();
+    //localStorage.clear();
     fetch(process.env.REACT_APP_BASE_URL + "/users/1" ,{method:'GET'})
     .then(res => res.json())
     .then(

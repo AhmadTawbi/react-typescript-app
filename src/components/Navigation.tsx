@@ -3,10 +3,12 @@
 // example: <li><Link to='/newUrl here'>Navigation Name here</Link></li>
 
 import {Link} from "react-router-dom";
+interface iProps{}
+const Navigation:React.FC<iProps> = (props) =>{
 
-const Navigation = () => {
-    return (
-        <div>
+    return(
+        <>
+       <div>
             <ul>
                 <li>
                     <Link to='/'>Dashboard</Link>
@@ -16,8 +18,11 @@ const Navigation = () => {
                 </li>
             </ul>
         </div>
+        </>
+
     )
 }
+
 
 export default Navigation;
 
