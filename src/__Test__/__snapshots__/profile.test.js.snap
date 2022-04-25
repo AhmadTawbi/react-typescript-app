@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes the class when hovered 1`] = `
+<div
+  className="profileContainer"
+>
+  <div
+    className="profileImage"
+  >
+    <img
+      alt="profile"
+      src="profile.jpg"
+    />
+  </div>
+  <div
+    className="profileName"
+  >
+    test
+  </div>
+  <div
+    className="profileEmail"
+  >
+    abc@test.com
+  </div>
+  <div
+    className="viewProfile"
+  >
+    <button
+      className="ant-btn ant-btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        View Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`changes the class when hovered 2`] = `
+<div
+  className="profileContainer"
+>
+  <div
+    className="profileImage"
+  >
+    <img
+      alt="profile"
+      src="profile.jpg"
+    />
+  </div>
+  <div
+    className="profileName"
+  >
+    test
+  </div>
+  <div
+    className="profileEmail"
+  >
+    abc@test.com
+  </div>
+  <div
+    className="viewProfile"
+  >
+    <button
+      className="ant-btn ant-btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        View Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`changes the class when hovered 3`] = `
+<div
+  className="profileContainer"
+>
+  <div
+    className="profileImage"
+  >
+    <img
+      alt="profile"
+      src="profile.jpg"
+    />
+  </div>
+  <div
+    className="profileName"
+  >
+    test
+  </div>
+  <div
+    className="profileEmail"
+  >
+    abc@test.com
+  </div>
+  <div
+    className="viewProfile"
+  >
+    <button
+      className="ant-btn ant-btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        View Profile
+      </span>
+    </button>
+  </div>
+</div>
+`;

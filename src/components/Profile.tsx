@@ -5,7 +5,8 @@
 import { Button } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import profile from '../images/profile.jpg';
+const profileImage=require('../images/profile.jpg');
+
 export interface iProfileData {
     name: string;
     email: string;
@@ -42,7 +43,7 @@ const Profile = () => {
     return (
         <div className="profileContainer">
             <div className="profileImage">
-                <img src={profile} alt="profile" />
+                <img src={profileImage} alt="profile" />
             </div>
             <div className="profileName">{profileCard.name}</div>
             <div className="profileEmail">{profileCard.email}</div>
