@@ -1,5 +1,5 @@
 /** this is the css file for all the pages, common css **/
-
+@import '~antd/dist/antd.css';
 
 html,body{font-size: 16px;}
 .ant-layout-sider{background-color: white;}

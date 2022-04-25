@@ -1,7 +1,6 @@
 // this is the Report page
 // here to manage the Report page content
-import 'antd/dist/antd.css';
-import '../App.css';
+
 import { Layout } from 'antd';
 import { PageLayout } from './Layout';
 const {Content } = Layout;

@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-import 'antd/dist/antd.css';
 import './App.css';
-import {API_URL} from './api/config'
 import {
   BrowserRouter as Router,
   Routes,

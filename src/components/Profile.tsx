@@ -39,7 +39,7 @@ const Profile = () => {
             ...profileCard,
             ...items
         }));
-    })
+    },[])
 
 
     return (

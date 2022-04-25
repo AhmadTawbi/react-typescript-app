@@ -1,8 +1,7 @@
 // this is the profile details page
 import { Row, Col } from 'antd';
 import { useEffect, useState } from 'react';
-import 'antd/dist/antd.css';
-import '../App.css';
+
 import profile from '../images/profile.jpg';
 
 import { Layout } from 'antd';
@@ -25,7 +24,7 @@ export const ProfileDetails = () => {
             ...profileCard,
             ...items
         }));        
-    })
+    },[])
     return <PageLayout children={<Content>
         <div className='MainHeader'>
             <h2>Profile</h2>
