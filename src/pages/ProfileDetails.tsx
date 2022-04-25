@@ -7,7 +7,6 @@ import profile from '../images/profile.jpg';
 import { Layout } from 'antd';
 import { PageLayout } from './Layout';
 import { iProfileData } from '../components/Profile';
-import { LoadingSpinner } from '../components/loadingSpinner';
 
 const {Content } = Layout;
 
@@ -15,34 +14,22 @@ const {Content } = Layout;
 export const ProfileDetails = () => {
     // this is the component states
     const [profileCard, setProfileCard] = useState<iProfileData>({ name: '', phone: 0, email: '', website: '', address: { city: '', street: '' } });
-    const [isLoading,setIsLoading] = useState(false);
 
     // here to get the profile data from local storage
     // it updates the component state to render the component
-    let items:{};
+   
     useEffect(() => {
-         items = JSON.parse(localStorage.getItem('UserProfile')!);
-        if(items){
-            setProfileCard(profileCard => ({
-                ...profileCard,
-                ...items
-            }));
-        }
-        else{
-            setIsLoading(true);
-            checkData();          
-        }
-        
-    },[isLoading])
+        const items = JSON.parse(localStorage.getItem('UserProfile')!);
+          setProfileCard(profileCard => ({
+              ...profileCard,
+              ...items
+          }));
+    },[])
 
 
-    function checkData(){
-        setTimeout(() => {
-            items? setIsLoading(false) : setIsLoading(true)
-        }, 2000);
-    }
 
-    if(!isLoading){
+
+
         return <PageLayout children={<Content>
             <div className='MainHeader'>
                 <h2>Profile</h2>
@@ -83,16 +70,6 @@ export const ProfileDetails = () => {
         </Content>
     
         } />;
-    }
-    else{
-        return(
-                <PageLayout children={<LoadingSpinner/>}/>
-            
-            
-        )
-    }
-
-
 }
 
 
